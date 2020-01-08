@@ -51,23 +51,23 @@
             </ImageView>
             <ImageView
                 android:id="@+id/weatherIconId"
-                android:layout_centerHorizontal="true"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:scaleType="fitXY"
                 android:layout_marginTop="15dp"
                 android:src="@drawable/snow"
                 >
             </ImageView>
+
             <TextView
                 android:id="@+id/weatherDiscriptionId"
                 android:layout_below="@+id/weatherIconId"
-                android:layout_toRightOf="@+id/tmpicon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:textColor="#E6E6E6"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 >
             </TextView>
         </RelativeLayout>
@@ -126,22 +126,23 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             >
-            <ImageView
-                android:id="@+id/sunriseImage"
-                android:layout_width="100dp"
-                android:scaleType="centerCrop"
-                android:layout_centerHorizontal="true"
-                android:layout_height="80dp"
-                android:src="@drawable/sunrise"
-                >
+<!--            <ImageView-->
+<!--                android:id="@+id/sunriseImage"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_height="80dp"-->
+<!--                android:src="@drawable/sunrise"-->
+<!--                >-->
 
-            </ImageView>
+<!--            </ImageView>-->
             <TextView
                 android:id="@+id/sr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textSize="20sp"
+                android:textStyle="bold"
                 android:text="Sunrise"
                 android:textColor="#E6E6E6"
               android:layout_marginTop="15dp"
@@ -165,16 +166,16 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             >
-            <ImageView
-                android:id="@+id/sunsetImage"
-                android:layout_width="100dp"
-                android:scaleType="centerCrop"
-                android:layout_centerHorizontal="true"
-                android:layout_height="80dp"
-                android:src="@drawable/sunset"
-                >
+<!--            <ImageView-->
+<!--                android:id="@+id/sunsetImage"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_height="80dp"-->
+<!--                android:src="@drawable/sunset"-->
+<!--                >-->
 
-            </ImageView>
+<!--            </ImageView>-->
             <TextView
                 android:id="@+id/ss"
                 android:layout_width="match_parent"
@@ -182,6 +183,7 @@
                 android:gravity="center"
                 android:textSize="20sp"
                 android:text="Sunset"
+                android:textStyle="bold"
                 android:textColor="#E6E6E6"
                 android:layout_marginTop="15dp"
                 >

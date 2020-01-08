@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
     private LocationCallback callback;
     private LocationRequest request;
 
-    public static String lat = "28.21";
-    public static String lon = "79.54";
+    public static String lat ;
+    public static String lon ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,11 +52,12 @@ public class MainActivity extends AppCompatActivity {
         projectViewModel = ViewModelProviders.of(this).get(ProjectViewModel.class);
 
         getLatLon();
-        getWeather();
+       // getWeather();
 
     }
 
     private void getWeather(){
+
         projectViewModel.getDataObsarvable(lat,lon).observe(this, new Observer<Model>() {
             @Override
             public void onChanged(Model model) {
@@ -98,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
                     lat = String.valueOf(location.getLatitude());
                     lon = String.valueOf(location.getLongitude());
 
+                    getWeather();
                 }
 
             }
